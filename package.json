@@ -1,0 +1,13 @@
+{
+  "name": "example-gitbook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:radavis/example-gitbook.git",
+  "author": "Richard Davis <rdavis.bacs@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-load-plugins": "^2.0.2"
+  }
+}
