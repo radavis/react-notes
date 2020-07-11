@@ -1,0 +1,13 @@
+{
+  "gitbook": "3.2.x",
+  "title": "Example Gitbook",
+  "description": "Clone it and modify, as needed.",
+  "language": "en",
+  "plugins": [
+    "include-codeblock"
+  ],
+  "styles": {
+    "website": "styles/website.css",
+    "epub": "styles/epub.css"
+  }
+}
