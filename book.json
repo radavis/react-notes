@@ -1,0 +1,13 @@
+{
+  "gitbook": "3.2.x",
+  "title": "React Notes",
+  "description": "Notes on the React ecosystem.",
+  "language": "en",
+  "plugins": [
+    "include-codeblock"
+  ],
+  "styles": {
+    "website": "styles/website.css",
+    "epub": "styles/epub.css"
+  }
+}

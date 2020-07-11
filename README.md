@@ -1,5 +1,3 @@
-# Introduction
+# React Notes
 
-Example GitBook. Content is meaningless.
-
-Landing page content goes here.
+A GitBook documenting important concepts within the React ecosystem.
