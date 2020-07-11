@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 set -e
+set -v
 
-# source: https://gist.github.com/SangsooNam/aa73c3e1ff88d30433e4020f1275242a
+# https://stackoverflow.com/a/26961416/2675670
+git-switch() {
+  git checkout $1 2>/dev/null || git checkout -b $1
+}
 
+# modified from: https://gist.github.com/SangsooNam/aa73c3e1ff88d30433e4020f1275242a
+rm -rf _book
 gitbook install && gitbook build
-git checkout gh-pages
-git pull origin gh-pages --rebase
-cp -R _book/* .
-git clean -fx node_modules
-git clean -fx _book
+git-switch gh-pages
+cp -r _book/* .
 git add .
-git commit -a -m "Update GitHub Pages $(date +%Y%m%d%H%M%S)"
+git commit -a -m "published $(date +%Y%m%d%H%M%S)"
 git push origin gh-pages
 git checkout master
