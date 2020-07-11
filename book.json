@@ -1,7 +1,7 @@
 {
   "gitbook": "3.2.x",
-  "title": "Example Gitbook",
-  "description": "Clone it and modify, as needed.",
+  "title": "React Notes",
+  "description": "Notes on the React ecosystem.",
   "language": "en",
   "plugins": [
     "include-codeblock"
