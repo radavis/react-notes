@@ -2,14 +2,16 @@
 set -e
 set -v
 
-switch() {
+# https://stackoverflow.com/a/26961416/2675670
+git-switch() {
   git checkout $1 2>/dev/null || git checkout -b $1
 }
 
 # modified from: https://gist.github.com/SangsooNam/aa73c3e1ff88d30433e4020f1275242a
 
+rm -rf _book
 gitbook install && gitbook build
-switch gh-pages
+git-switch gh-pages
 git pull origin gh-pages --rebase
 cp -R _book/* .
 git add .
