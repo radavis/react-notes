@@ -8,10 +8,9 @@ git-switch() {
 }
 
 # modified from: https://gist.github.com/SangsooNam/aa73c3e1ff88d30433e4020f1275242a
-git-switch gh-pages
 rm -rf _book
 gitbook install && gitbook build
-git pull origin gh-pages --rebase
+git-switch gh-pages
 cp -r _book/* .
 git add .
 git commit -a -m "published $(date +%Y%m%d%H%M%S)"
