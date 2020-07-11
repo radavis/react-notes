@@ -33,8 +33,3 @@ $ open https://YOUR_USERNAME.github.io/example-gitbook
 * [GitBook on npmjs.com](https://www.npmjs.com/package/gitbook)
 * [GitBook cli documentation](https://gitbookio.gitbooks.io/docs-toolchain/)
 * [GitBook Documentation](https://gitbookio.gitbooks.io/documentation/index.html)
-
-## Notes
-
-Naming files `index.md` isn't a good idea. The `gitbook` cli will write its own
-`index.html`.
