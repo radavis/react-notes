@@ -25,6 +25,7 @@ Then, edit away.
 ```bash
 $ git remote add origin git@github.com:YOUR_USERNAME/example-gitbook.git
 $ ./bin/publish
+$ open https://YOUR_USERNAME.github.io/example-gitbook
 ```
 
 ## Resources
