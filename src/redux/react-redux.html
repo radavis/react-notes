@@ -322,15 +322,20 @@ ReactDOM.render(
 <pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>
 <span class="hljs-keyword">import</span> { increment, decrement, reset } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actionCreators&apos;</span>
 
-<span class="hljs-comment">// const Counter = ...</span>
+<span class="hljs-keyword">const</span> Counter = ({ counter, increment }) =&gt; (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    Value: {counter}
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{increment}</span>&gt;</span>Increment<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
 
 <span class="hljs-comment">// mapReduxStateToComponentProps</span>
-<span class="hljs-keyword">const</span> mapStateToProps = (state <span class="hljs-comment">/*, ownProps*/</span>) =&gt; {
-  <span class="hljs-keyword">return</span> {
-    counter: state.counter
-  }
-}
+<span class="hljs-keyword">const</span> mapStateToProps = state =&gt; ({
+  counter: state.counter
+})
 
+<span class="hljs-comment">// create pre-bound action creators that automatically dispatch their actions</span>
+<span class="hljs-comment">// when called. - https://redux.js.org/faq/react-redux</span>
 <span class="hljs-keyword">const</span> mapDispatchToProps = { increment, decrement, reset }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
@@ -391,7 +396,7 @@ ReactDOM.render(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React + Redux","level":"1.4.5","depth":2,"next":{"title":"connected-react-router","level":"1.5","depth":1,"path":"src/connected-react-router/index.md","ref":"src/connected-react-router/index.md","articles":[]},"previous":{"title":"Reducer","level":"1.4.4","depth":2,"path":"src/redux/reducer.md","ref":"src/redux/reducer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock"],"styles":{"website":"styles/website.css","epub":"styles/epub.css"},"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Notes","language":"en","gitbook":"3.2.x","description":"Notes on the React ecosystem."},"file":{"path":"src/redux/react-redux.md","mtime":"2020-07-11T21:47:59.155Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-11T21:51:40.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React + Redux","level":"1.4.5","depth":2,"next":{"title":"connected-react-router","level":"1.5","depth":1,"path":"src/connected-react-router/index.md","ref":"src/connected-react-router/index.md","articles":[]},"previous":{"title":"Reducer","level":"1.4.4","depth":2,"path":"src/redux/reducer.md","ref":"src/redux/reducer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock"],"styles":{"website":"styles/website.css","epub":"styles/epub.css"},"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Notes","language":"en","gitbook":"3.2.x","description":"Notes on the React ecosystem."},"file":{"path":"src/redux/react-redux.md","mtime":"2020-07-14T15:04:40.103Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-22T20:56:47.566Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

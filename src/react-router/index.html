@@ -319,30 +319,18 @@ will still be able to use this app.</p>
       &lt;div&gt;
         &lt;nav&gt;
           &lt;ul&gt;
-            &lt;li&gt;
-              &lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;Link to=&quot;/users&quot;&gt;Users&lt;/Link&gt;
-            &lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;Users&lt;/Link&gt;&lt;/li&gt;
           &lt;/ul&gt;
         &lt;/nav&gt;
 
         {/* A &lt;Switch&gt; looks through its children &lt;Route&gt;s and
             renders the first one that matches the current URL. */}
         &lt;Switch&gt;
-          &lt;Route path=&quot;/about&quot;&gt;
-            &lt;About /&gt;
-          &lt;/Route&gt;
-          &lt;Route path=&quot;/users&quot;&gt;
-            &lt;Users /&gt;
-          &lt;/Route&gt;
-          &lt;Route path=&quot;/&quot;&gt;
-            &lt;Home /&gt;
-          &lt;/Route&gt;
+          &lt;Route exact path=&quot;/&quot; component={Home} /&gt;
+          &lt;Route path=&quot;/about&quot; component={About} /&gt;
+          &lt;Route path=&quot;/users&quot; component={Users} /&gt;
         &lt;/Switch&gt;
       &lt;/div&gt;
     &lt;/Router&gt;
@@ -392,7 +380,7 @@ will still be able to use this app.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React Router","level":"1.3","depth":1,"next":{"title":"Redux","level":"1.4","depth":1,"path":"src/redux/index.md","ref":"src/redux/index.md","articles":[{"title":"Store","level":"1.4.1","depth":2,"path":"src/redux/store.md","ref":"src/redux/store.md","articles":[]},{"title":"Actions","level":"1.4.2","depth":2,"path":"src/redux/actions.md","ref":"src/redux/actions.md","articles":[]},{"title":"Dispatcher","level":"1.4.3","depth":2,"path":"src/redux/dispatcher.md","ref":"src/redux/dispatcher.md","articles":[]},{"title":"Reducer","level":"1.4.4","depth":2,"path":"src/redux/reducer.md","ref":"src/redux/reducer.md","articles":[]},{"title":"React + Redux","level":"1.4.5","depth":2,"path":"src/redux/react-redux.md","ref":"src/redux/react-redux.md","articles":[]}]},"previous":{"title":"Context","level":"1.2.2","depth":2,"path":"src/react/context/index.md","ref":"src/react/context/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock"],"styles":{"website":"styles/website.css","epub":"styles/epub.css"},"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Notes","language":"en","gitbook":"3.2.x","description":"Notes on the React ecosystem."},"file":{"path":"src/react-router/index.md","mtime":"2020-07-11T21:47:59.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-11T21:51:40.034Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React Router","level":"1.3","depth":1,"next":{"title":"Redux","level":"1.4","depth":1,"path":"src/redux/index.md","ref":"src/redux/index.md","articles":[{"title":"Store","level":"1.4.1","depth":2,"path":"src/redux/store.md","ref":"src/redux/store.md","articles":[]},{"title":"Actions","level":"1.4.2","depth":2,"path":"src/redux/actions.md","ref":"src/redux/actions.md","articles":[]},{"title":"Dispatcher","level":"1.4.3","depth":2,"path":"src/redux/dispatcher.md","ref":"src/redux/dispatcher.md","articles":[]},{"title":"Reducer","level":"1.4.4","depth":2,"path":"src/redux/reducer.md","ref":"src/redux/reducer.md","articles":[]},{"title":"React + Redux","level":"1.4.5","depth":2,"path":"src/redux/react-redux.md","ref":"src/redux/react-redux.md","articles":[]}]},"previous":{"title":"Context","level":"1.2.2","depth":2,"path":"src/react/context/index.md","ref":"src/react/context/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock"],"styles":{"website":"styles/website.css","epub":"styles/epub.css"},"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Notes","language":"en","gitbook":"3.2.x","description":"Notes on the React ecosystem."},"file":{"path":"src/react-router/index.md","mtime":"2020-07-11T21:47:59.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-22T20:56:47.566Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
