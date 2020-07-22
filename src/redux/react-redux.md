@@ -33,15 +33,20 @@ Connect your component to the store.
 import { connect } from 'react-redux'
 import { increment, decrement, reset } from './actionCreators'
 
-// const Counter = ...
+const Counter = ({ counter, increment }) => (
+  <div>
+    Value: {counter}
+    <button onClick={increment}>Increment</button>
+  </div>
+)
 
 // mapReduxStateToComponentProps
-const mapStateToProps = (state /*, ownProps*/) => {
-  return {
-    counter: state.counter
-  }
-}
+const mapStateToProps = state => ({
+  counter: state.counter
+})
 
+// create pre-bound action creators that automatically dispatch their actions
+// when called. - https://redux.js.org/faq/react-redux
 const mapDispatchToProps = { increment, decrement, reset }
 
 export default connect(

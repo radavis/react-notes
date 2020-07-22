@@ -25,3 +25,6 @@ const loginAction = () => {
 
 // store.dispatch(loginAction())
 ```
+
+> Redux reducers reduce a set of actions (over time) into a single state
+> - https://redux.js.org/tutorials/essentials/part-1-overview-concepts
