@@ -11,6 +11,7 @@ git-switch() {
 rm -rf _book
 gitbook install && gitbook build
 git-switch gh-pages
+git merge master
 cp -r _book/* .
 git add .
 git commit -a -m "published $(date +%Y%m%d%H%M%S)"
