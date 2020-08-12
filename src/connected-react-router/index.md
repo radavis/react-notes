@@ -6,7 +6,6 @@
 
 ```jsx
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -22,10 +21,45 @@ const Root = ({ history, store }) => {
   );
 };
 
-Root.propTypes = {
-  history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  store: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
-};
-
 export default Root;
+```
+
+Your state tree now has the following nodes:
+
+```js
+const state = {
+  router: {
+    location: {
+      pathname: '/',
+      search: '',
+      hash: '',
+      key: '',
+      query: {}
+    },
+    action: ''
+  }
+}
+```
+
+Subscribe to location changes app (e.g. - `pathname`), and update state.
+
+```js
+import { LOCATION_CHANGE } from 'connected-react-router';
+
+const reducer = (state = initialState, action = {}) => {
+  switch (action.type) {
+    case LOCATION_CHANGE:
+      // ...
+      return {
+        ...state,
+        updatedProp
+      }
+
+    default:
+      return state
+
+  }
+}
+
+export default reducer
 ```
